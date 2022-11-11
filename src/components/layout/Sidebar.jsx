@@ -11,14 +11,15 @@ const Sidebar = () => {
   const normalLink = 'flex items-center gap-5 pl-4 pt-3 pb-2.5 rounded-lg text-md  dark:text--700 dark:hover:text-black hover:bg-light-gray m-2';
 
   // const [adminLinks, setAdminLinks] = useState([])
-  const {user} = useContext(AppContext)
+  // const {user} = useContext(AppContext)
   // console.log(user.admin)
+  const user = {
+    name: 'Maxine',  
+    is_staff: true,
+    role: "admin"
+  }
   const isAdmin = user.is_staff ? 'admin' : 'user'
 
-  // const userIsAdmin = {
-  //   name: 'Amekwi',  
-  //   role: isAdmin,
-  // }
   const userLinks = orderLinks.filter(orderLink => orderLink.role === isAdmin);
   
 

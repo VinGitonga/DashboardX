@@ -18,6 +18,7 @@ const Forum = () => {
             {forums.map((item) => (
                 <ForumItem data={item} key={item.id} />
             ))}
+            {[...Array(5)].map((_, i) => <ForumItem key={i} />)}
         </div>
     );
 };

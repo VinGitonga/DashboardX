@@ -8,9 +8,9 @@ const ProtectedRoutes = ({ children }) => {
 
     const {user} = useContext(AppProvider);
 
-    if(!user){
-        return <Navigate to='/login' />
-    }
+    // if(!user){
+    //     return <Navigate to='/login' />
+    // }
   return children;
 }
 
